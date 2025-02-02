@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workshop #3: Learning-MarkdownTag</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <h1>Example: MarkdownTag</h1>
+    <p>MarkdownTag is a simple tag that can be used to render markdown text.</p>
+    <h2>MarkdownTag Result: ...</h2>
+    <div id="MDContent"></div>
+    <script>
+        var data = `
+### Marked in the browser
+Rendered by **marked**.
+
+**1. Bold Text**  
+**ตัวหนา**
+
+**2. Italic Text**  
+*ตัวเอียง*
+
+**3. Bold & Italic**  
+***ตัวหนา-ตัวเอียง***
+
+**4. Strikethrough**  
+~~ข้อความที่ถูกขีดฆ่า~~
+
+**5. Heading Examples**  
+# Heading 1  
+## Heading 2  
+### Heading 3  
+#### Heading 4  
+##### Heading 5  
+###### Heading 6  
+
+**6. Paragraph**  
+ทอแสงนภา ตะวันลาสุริยง สักพักก็คงตกลงมา ภาพที่คุ้นตา กลับมาย้ำเป็นครั้งครา
+
+**7. Blockquote**  
+> 1 วันมีกี่ชั่วโมง
+>> 24 ชั่วโมง
+
+**8. Ordered List**  
+1. lomosonic
+2. silly fools
+3. the whitest crow
+4. big ass
+5. ebola
+
+**9. Links (NCT DREAM Songs)**  
+[Hot Sauce](https://youtu.be/PkKnp4SdE-w)  
+[Hello Future](https://youtu.be/0IpbvXVbBYA)  
+[Glitch Mode](https://youtu.be/2_xQwTN_s2g)  
+[Candy](https://youtu.be/zuoSn3ObMz4)
+
+**10. Emoji**  
+💗 🤙 🐱
+        `;
+        document.getElementById("MDContent").innerHTML = marked.parse(data);
+    </script>
+</body>
+</html>
